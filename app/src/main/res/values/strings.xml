@@ -2,4 +2,8 @@
     <string name="app_name">Calculator_App</string>
     <string name="first_value">First Value</string>
     <string name="second_value">Second Value</string>
+    <string name="addition">Addition</string>
+    <string name="subtraction">subtraction</string>
+    <string name="multiplication">multiplication</string>
+    <string name="division">division</string>
 </resources>

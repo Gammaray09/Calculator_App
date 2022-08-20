@@ -20,68 +20,80 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <ImageButton
+        android:id="@+id/division"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="36dp"
+        android:background="@color/darkskyblue"
+        android:contentDescription="@string/division"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/multiplication"
+        app:srcCompat="@drawable/divide" />
+
+    <ImageButton
+        android:id="@+id/multiplication"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="36dp"
+        android:background="@color/darkskyblue"
+        android:contentDescription="@string/multiplication"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subtraction"
+        app:srcCompat="@drawable/multi" />
+
+    <ImageButton
+        android:id="@+id/subtraction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="36dp"
+        android:background="@color/darkskyblue"
+        android:contentDescription="@string/subtraction"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addition"
+        app:srcCompat="@drawable/minus" />
+
+    <ImageButton
+        android:id="@+id/addition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="36dp"
+        android:background="@color/darkskyblue"
+        android:contentDescription="@string/addition"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/plus" />
+
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/firstValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
-        android:layout_marginBottom="424dp"
+        android:layout_marginTop="128dp"
         android:ems="10"
         android:hint="@string/first_value"
-        android:inputType="textPersonName"
-        android:textColor="@color/black"
-        android:textColorHighlight="@color/Air_Superiority_blue"
+        android:inputType="number"
+        android:minHeight="48dp"
         android:textColorHint="@color/Chinese_Violet"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/secondValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
-        android:layout_marginBottom="352dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
         android:hint="@string/second_value"
-        android:inputType="textPersonName"
+        android:inputType="number"
+        android:minHeight="48dp"
         android:textColorHint="@color/Chinese_Violet"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageButton
-        android:id="@+id/imageButton10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/darkskyblue"
-        app:srcCompat="@drawable/divide"
-        tools:layout_editor_absoluteX="307dp"
-        tools:layout_editor_absoluteY="327dp" />
-
-    <ImageButton
-        android:id="@+id/imageButton11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/darkskyblue"
-        app:srcCompat="@drawable/multi"
-        tools:layout_editor_absoluteX="307dp"
-        tools:layout_editor_absoluteY="239dp" />
-
-    <ImageButton
-        android:id="@+id/imageButton12"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/darkskyblue"
-        app:srcCompat="@drawable/minus"
-        tools:layout_editor_absoluteX="278dp"
-        tools:layout_editor_absoluteY="165dp" />
-
-    <ImageButton
-        android:id="@+id/imageButton13"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/darkskyblue"
-        app:srcCompat="@drawable/plus"
-        tools:layout_editor_absoluteX="269dp"
-        tools:layout_editor_absoluteY="90dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstValue" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
