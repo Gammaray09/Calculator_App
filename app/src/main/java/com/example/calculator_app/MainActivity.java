@@ -21,11 +21,8 @@ public class MainActivity extends AppCompatActivity {
         EditText secondNumber = findViewById(R.id.secondValue);
         TextView output = findViewById(R.id.output);
 
-        int num1 = Integer.parseInt(firstNumber.getText().toString());
-        int num2 = Integer.parseInt(secondNumber.getText().toString());
 
-        int sum = num1 + num2;
-        output.setText(""+sum);
+
     }
 
     public void findDifference(View view){
@@ -33,10 +30,10 @@ public class MainActivity extends AppCompatActivity {
         EditText secondNumber = findViewById(R.id.secondValue);
         TextView output = findViewById(R.id.output);
 
-        int num1 = Integer.parseInt(firstNumber.getText().toString());
-        int num2 = Integer.parseInt(secondNumber.getText().toString());
+        double num1 = Double.parseDouble(firstNumber.getText().toString());
+        double num2 = Double.parseDouble(secondNumber.getText().toString());
 
-        int Difference = num1 - num2;
+        double Difference = num1 - num2;
         output.setText(""+Difference);
     }
 
@@ -45,11 +42,16 @@ public class MainActivity extends AppCompatActivity {
         EditText secondNumber = findViewById(R.id.secondValue);
         TextView output = findViewById(R.id.output);
 
-        int num1 = Integer.parseInt(firstNumber.getText().toString());
-        int num2 = Integer.parseInt(secondNumber.getText().toString());
+        if(firstNumber.getText().toString().equals("") || secondNumber.getText().toString().equals("")){
+            output.setText("Empty Input");
+        }else{
+            double num1 = Double.parseDouble(firstNumber.getText().toString());
+            double num2 = Double.parseDouble(secondNumber.getText().toString());
 
-        int Product = num1 * num2;
-        output.setText(""+Product);
+
+            double Product = num1 * num2;
+            output.setText(""+Product);
+        }
     }
 
     public void findQuotient(View view){
@@ -57,10 +59,10 @@ public class MainActivity extends AppCompatActivity {
         EditText secondNumber = findViewById(R.id.secondValue);
         TextView output = findViewById(R.id.output);
 
-        int num1 = Integer.parseInt(firstNumber.getText().toString());
-        int num2 = Integer.parseInt(secondNumber.getText().toString());
+        double num1 = Double.parseDouble(firstNumber.getText().toString());
+        double num2 = Double.parseDouble(secondNumber.getText().toString());
 
-        int Quotient = num1 / num2;
+        double Quotient = num1 / num2;
         output.setText(""+Quotient);
     }
 }

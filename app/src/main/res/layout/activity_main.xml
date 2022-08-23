@@ -11,14 +11,14 @@
         android:id="@+id/Main_Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="584dp"
         android:fontFamily="monospace"
         android:text="Calculator"
         android:textColor="@color/Chinese_Violet"
         android:textSize="60sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
         android:id="@+id/division"
@@ -63,51 +63,21 @@
         android:id="@+id/addition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="36dp"
         android:background="@color/darkskyblue"
         android:contentDescription="@string/addition"
         android:onClick="findSum"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Main_Title"
         app:srcCompat="@drawable/plus" />
-
-    <EditText
-        android:id="@+id/firstValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="32dp"
-        android:ems="10"
-        android:fontFamily="monospace"
-        android:hint="@string/first_value"
-        android:inputType="number"
-        android:minHeight="48dp"
-        android:textColorHint="@color/Chinese_Violet"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Main_Title" />
-
-    <EditText
-        android:id="@+id/secondValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="36dp"
-        android:ems="10"
-        android:fontFamily="monospace"
-        android:hint="@string/second_value"
-        android:inputType="number"
-        android:minHeight="48dp"
-        android:textColorHint="@color/Chinese_Violet"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/firstValue" />
 
     <TextView
         android:id="@+id/output"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="64dp"
         android:outlineProvider="background"
         android:textColor="@color/Chinese_Violet"
         android:textSize="60sp"
@@ -118,8 +88,8 @@
         android:id="@+id/answerLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginBottom="4dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="8dp"
         android:fontFamily="monospace"
         android:text="Answer:"
         android:textColor="@color/Chinese_Violet"
@@ -127,5 +97,35 @@
         app:layout_constraintBottom_toTopOf="@+id/output"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/firstValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="52dp"
+        android:ems="10"
+        android:fontFamily="monospace"
+        android:hint="@string/first_value"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/Chinese_Violet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Main_Title" />
+
+    <EditText
+        android:id="@+id/secondValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="@string/second_value"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textColorHint="@color/Chinese_Violet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstValue" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
