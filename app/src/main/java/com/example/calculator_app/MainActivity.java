@@ -2,8 +2,10 @@ package com.example.calculator_app;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
 
@@ -16,12 +18,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    double answer = 0.0;
+
     public void findSum(View view){
         EditText firstNumber = findViewById(R.id.firstValue);
         EditText secondNumber = findViewById(R.id.secondValue);
         TextView output = findViewById(R.id.output);
+        if(firstNumber.getText().toString().equals("") || secondNumber.getText().toString().equals("")){
+            output.setText("Empty Input");
+        }else {
+            double num1 = Double.parseDouble(firstNumber.getText().toString());
+            double num2 = Double.parseDouble(secondNumber.getText().toString());
 
-
+            double sum = num1 + num2;
+            output.setText("" + sum);
+            answer = sum;
+        }
+        closeKeyboard();
 
     }
 
@@ -30,11 +43,17 @@ public class MainActivity extends AppCompatActivity {
         EditText secondNumber = findViewById(R.id.secondValue);
         TextView output = findViewById(R.id.output);
 
-        double num1 = Double.parseDouble(firstNumber.getText().toString());
-        double num2 = Double.parseDouble(secondNumber.getText().toString());
+        if(firstNumber.getText().toString().equals("") || secondNumber.getText().toString().equals("")){
+            output.setText("Empty Input");
+        }else {
+            double num1 = Double.parseDouble(firstNumber.getText().toString());
+            double num2 = Double.parseDouble(secondNumber.getText().toString());
 
-        double Difference = num1 - num2;
-        output.setText(""+Difference);
+            double difference = num1 - num2;
+            output.setText("" + difference);
+            answer = difference;
+        }
+        closeKeyboard();
     }
 
     public void findProduct(View view){
@@ -49,9 +68,11 @@ public class MainActivity extends AppCompatActivity {
             double num2 = Double.parseDouble(secondNumber.getText().toString());
 
 
-            double Product = num1 * num2;
-            output.setText(""+Product);
+            double product = num1 * num2;
+            output.setText(""+product);
+            answer = product;
         }
+        closeKeyboard();
     }
 
     public void findQuotient(View view){
@@ -59,10 +80,51 @@ public class MainActivity extends AppCompatActivity {
         EditText secondNumber = findViewById(R.id.secondValue);
         TextView output = findViewById(R.id.output);
 
-        double num1 = Double.parseDouble(firstNumber.getText().toString());
-        double num2 = Double.parseDouble(secondNumber.getText().toString());
+        if(firstNumber.getText().toString().equals("") || secondNumber.getText().toString().equals("")){
+            output.setText("Empty Input");
+        }else {
+            double num1 = Double.parseDouble(firstNumber.getText().toString());
+            double num2 = Double.parseDouble(secondNumber.getText().toString());
 
-        double Quotient = num1 / num2;
-        output.setText(""+Quotient);
+            double quotient = num1 / num2;
+            output.setText("" + quotient);
+            answer = quotient;
+
+        }
+        closeKeyboard();
+    }
+
+
+    public void round(View view){
+        TextView output = findViewById(R.id.output);
+
+        int intAnswer = (int) Math.round(answer);
+        output.setText("" + intAnswer);
+    }
+
+
+    //https://www.geeksforgeeks.org/how-to-programmatically-hide-android-soft-keyboard/
+    private void closeKeyboard()
+    {
+        // this will give us the view
+        // which is currently focus
+        // in this layout
+        View view = this.getCurrentFocus();
+
+        // if nothing is currently
+        // focus then this will protect
+        // the app from crash
+        if (view != null) {
+
+            // now assign the system
+            // service to InputMethodManager
+            InputMethodManager manager
+                    = (InputMethodManager)
+                    getSystemService(
+                            Context.INPUT_METHOD_SERVICE);
+            manager
+                    .hideSoftInputFromWindow(
+                            view.getWindowToken(), 0);
+        }
     }
 }

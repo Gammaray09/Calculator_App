@@ -11,7 +11,7 @@
         android:id="@+id/Main_Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="monospace"
         android:text="Calculator"
@@ -76,8 +76,8 @@
         android:id="@+id/output"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="92dp"
         android:outlineProvider="background"
         android:textColor="@color/Chinese_Violet"
         android:textSize="60sp"
@@ -127,5 +127,29 @@
         android:textColorHint="@color/Chinese_Violet"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/firstValue" />
+
+    <Button
+        android:id="@+id/round"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/Rhythm"
+        android:text="Round"
+        android:textColor="@color/darkskyblue"
+        android:textSize="24sp"
+        android:onClick="round"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secondValue" />
+
+    <Button
+        android:id="@+id/absolute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/Rhythm"
+        android:text="Button"
+        android:textColor="@color/darkskyblue"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="356dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
