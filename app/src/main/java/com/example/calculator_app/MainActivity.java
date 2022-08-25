@@ -114,6 +114,36 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    public void Exponent(View view){
+        EditText firstNumber = findViewById(R.id.firstValue);
+        EditText secondNumber = findViewById(R.id.secondValue);
+        TextView output = findViewById(R.id.output);
+
+        if(firstNumber.getText().toString().equals("") || secondNumber.getText().toString().equals("")){
+            output.setText("Empty Input");
+        }else {
+            double num1 = Double.parseDouble(firstNumber.getText().toString());
+            double num2 = Double.parseDouble(secondNumber.getText().toString());
+
+            double expAnswer = Math.pow(num1,num2);
+            output.setText("" + expAnswer);
+            answer = expAnswer;
+
+        }
+        closeKeyboard();
+    }
+
+    public void clear(View view){
+        EditText firstNumber = findViewById(R.id.firstValue);
+        EditText secondNumber = findViewById(R.id.secondValue);
+        TextView output = findViewById(R.id.output);
+
+        firstNumber.setText("");
+        secondNumber.setText("");
+        output.setText("");
+    }
+
+
     //https://www.geeksforgeeks.org/how-to-programmatically-hide-android-soft-keyboard/
     private void closeKeyboard()
     {

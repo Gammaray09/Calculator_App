@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/darkskyblue"
-    tools:context=".MainActivity" >
+    android:backgroundTint="@color/darkskyblue"
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/Main_Title"
@@ -77,8 +78,8 @@
         android:id="@+id/output"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginBottom="112dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="44dp"
         android:outlineProvider="background"
         android:textColor="@color/Chinese_Violet"
         android:textSize="60sp"
@@ -89,7 +90,7 @@
         android:id="@+id/answerLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="40dp"
         android:layout_marginBottom="8dp"
         android:fontFamily="monospace"
         android:text="Answer:"
@@ -150,11 +151,39 @@
         android:layout_marginStart="12dp"
         android:layout_marginTop="12dp"
         android:backgroundTint="@color/Rhythm"
-        android:text="| |"
         android:onClick="absolute"
+        android:text="| |"
         android:textColor="@color/darkskyblue"
         android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/round"
         app:layout_constraintTop_toBottomOf="@+id/secondValue" />
+
+    <Button
+        android:id="@+id/clearButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/Rhythm"
+        android:onClick="clear"
+        android:text="Clear"
+        android:textColor="@color/darkskyblue"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/round" />
+
+    <Button
+        android:id="@+id/exponent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/Rhythm"
+        android:text="Exp"
+        android:onClick="Exponent"
+        android:textColor="@color/darkskyblue"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/clearButton"
+        app:layout_constraintTop_toBottomOf="@+id/absolute" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
