@@ -102,6 +102,17 @@ public class MainActivity extends AppCompatActivity {
         output.setText("" + intAnswer);
     }
 
+    public void absolute(View view){
+        TextView output = findViewById(R.id.output);
+
+        if(answer < 0){
+            answer = answer * -1;
+        }
+
+        output.setText("" + answer);
+    }
+
+
 
     //https://www.geeksforgeeks.org/how-to-programmatically-hide-android-soft-keyboard/
     private void closeKeyboard()

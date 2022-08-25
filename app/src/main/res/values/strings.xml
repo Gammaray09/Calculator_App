@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Calculator_App</string>
+    <string name="app_name">Aashman Calculator</string>
     <string name="first_value">First Value</string>
     <string name="second_value">Second Value</string>
     <string name="addition">Addition</string>

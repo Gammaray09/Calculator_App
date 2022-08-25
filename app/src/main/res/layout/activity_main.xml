@@ -12,12 +12,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
         android:fontFamily="monospace"
+        android:soundEffectsEnabled="false"
         android:text="Calculator"
         android:textColor="@color/Chinese_Violet"
         android:textSize="60sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
@@ -76,8 +77,8 @@
         android:id="@+id/output"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginBottom="92dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginBottom="112dp"
         android:outlineProvider="background"
         android:textColor="@color/Chinese_Violet"
         android:textSize="60sp"
@@ -150,6 +151,7 @@
         android:layout_marginTop="12dp"
         android:backgroundTint="@color/Rhythm"
         android:text="| |"
+        android:onClick="absolute"
         android:textColor="@color/darkskyblue"
         android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/round"
