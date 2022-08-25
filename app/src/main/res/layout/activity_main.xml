@@ -135,10 +135,10 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="12dp"
         android:backgroundTint="@color/Rhythm"
+        android:onClick="round"
         android:text="Round"
         android:textColor="@color/darkskyblue"
         android:textSize="24sp"
-        android:onClick="round"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/secondValue" />
 
@@ -146,10 +146,13 @@
         android:id="@+id/absolute"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
         android:backgroundTint="@color/Rhythm"
-        android:text="Button"
+        android:text="| |"
         android:textColor="@color/darkskyblue"
-        tools:layout_editor_absoluteX="28dp"
-        tools:layout_editor_absoluteY="356dp" />
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/round"
+        app:layout_constraintTop_toBottomOf="@+id/secondValue" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
