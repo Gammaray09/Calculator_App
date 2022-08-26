@@ -152,7 +152,7 @@
         android:layout_marginTop="12dp"
         android:backgroundTint="@color/Rhythm"
         android:onClick="absolute"
-        android:text="| |"
+        android:text="ABS"
         android:textColor="@color/darkskyblue"
         android:textSize="24sp"
         app:layout_constraintStart_toEndOf="@+id/round"
